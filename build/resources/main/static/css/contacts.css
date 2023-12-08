@@ -1,0 +1,64 @@
+.hero{
+    background-image: url(../img/bg.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    font-family: 'GoogleSans-Regular';
+    display: grid;
+    grid-template-columns: 1fr;
+    justify-items: center;
+    text-align: center;
+    width: auto;
+    height: 70vh;
+}
+
+.text{
+    align-self: center;
+    font-size: 40px;
+    color: rgb(240, 238, 236);
+    text-shadow: 1px 1px 1px #000;
+    font-family: 'GoogleSans-Bold';
+}
+
+.text1{
+    align-self: center;
+    font-size: 25px;
+    color: rgb(240, 238, 236);
+    text-shadow: 1px 1px 1px #000;
+    font-family: 'GoogleSans-Regular';
+}
+
+.btn_tests{
+    width: 210px;
+    height: 60px;
+    background-color: #e68442;
+    color: #f0ecec;
+    border-radius: 20px;
+    border: 2px solid #ffffffc2;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow:  inset 1px 2px 2px #ffffffc2;
+    --bs-btn-hover-border-color: #ffffffc2;
+    text-shadow: 0.5px 0.5px 0.5px #000;
+}
+
+.btn_tests:hover {
+    color: #ffffff;
+}
+
+.btn_tests > a {
+    font-size: 25px;
+    text-decoration: none;
+    margin-right: 6px;
+    color: #f0ecec;
+}
+
+.btn_tests > i {
+    font-size: 20px;
+    margin-left: 6px;
+}

@@ -1,0 +1,374 @@
+  *{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+
+  h1{
+    padding-top: 1em;
+    padding-bottom: 0.5em;
+    font-family: 'GoogleSans-Bold';
+    font-size: 33px;
+    font-weight: normal;
+    color: #000000;
+    text-align: center;
+  }
+
+  h2{
+    padding-bottom: 1em;
+    font-family: 'GoogleSans-Regular';
+    font-size: 30px;
+    font-weight: normal;
+    color: #000000;
+    text-align: center;
+  }
+
+
+  /* Вопросы */
+
+  .cont{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+  }
+
+  .quest {
+    padding-bottom: 1em;
+    width: 70vw;
+  }
+
+  .question{
+    font-family: 'GoogleSans-Regular';
+    font-size: 25px;
+    color: #000000;
+    margin-left: 3px;
+  }
+
+  .ans{
+    width: 400px;
+    height: auto;
+  }
+
+  .check{
+    justify-self: center;
+    align-self: center;
+    margin: 2px;
+    display: flex;
+  }
+  .check>input {
+    position: absolute;
+    z-index: -1;
+    opacity: 0;
+  }
+  .check>span {
+    display: inline-flex;
+    align-items: center;
+    user-select: none;
+  }
+  .check>span::before {
+    content: '';
+    width: 35px;
+    height: 35px;
+    border-radius: 11px;
+    border: 4px solid;
+    background-color: rgb(255, 255, 255);
+    justify-self: center;
+    align-self: center;
+    transition: all 0.5s;
+  }
+  .check>input:checked+#child::before {
+    background-color: #b532d67b;
+  }
+
+  #child::before{
+    border-color: #b532d67b;
+  }
+
+  .answer{
+    margin-left: 5px;
+    font-family: 'GoogleSans-Regular';
+    font-size: 22px;
+  }
+
+
+  .btn_tests{
+    margin: 10px auto;
+    width: 120px;
+    height: 40px;
+    background-color: #db9ceb;
+    color: #ffffff;
+    border-radius: 20px;
+    border: 2px solid #ffffffc2;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow:  inset 1px 1px 1px #ffffffc2;
+    --bs-btn-hover-border-color: #ffffffc2;
+    font-family: 'GoogleSans-Regular';
+  }
+
+  .btn_tests:hover {
+    color: #e1e0e0;
+    --bs-btn-hover-border-color: #030303c2;
+    text-shadow: 0.5px 0.5px 0.5px rgba(26, 26, 26, 0.761)
+  }
+
+
+
+  /*Форма*/
+
+  form.result {
+    width: 50vw;
+    margin: 0 auto;
+  }
+
+  input {
+    border: none;
+    background-color: #db9ceb;
+    color: white;
+    font-family: 'GoogleSans-Regular';
+  }
+
+  table#answersTable {
+    width: 100%;
+    background-color: #db9ceb;
+    border-radius: 15px;
+    border-collapse: collapse;
+    color: white;
+    font-family: 'GoogleSans-Regular';
+    margin-top: 2em;
+  }
+  table#answersTable th {
+    border-bottom: 1px solid #ffffff; /* Добавляем границу только снизу для заголовков столбцов */
+  }
+  tr, th, td {
+    padding: 10px;
+  }
+
+  /* Media */
+
+  @media(min-width: 1350px){
+    h1{
+      font-size: 40px;
+    }
+    .cards > #card{
+      width: 400px;
+      height: 280px;
+      border-radius: 24px;
+      gap: 5px;
+      box-shadow: inset -13px -13px 12px 3px #1111115b; 
+    }
+    .cards > #card p{
+      font-size: 32px;
+    }
+    .cards > #card img{
+      height: 100px;
+    }
+    .cards .card2 img{
+      height: 100px;
+    }
+    .answer{
+      font-size: 20px;
+    }
+  }
+
+  @media(max-width: 1050px){
+    .cards > #card{
+      width: 250px;
+      height: 175px;
+      border-radius: 15px;
+      gap: 5px;
+      box-shadow: inset -8px -8px 12px 3px #1111115b; 
+    }
+    .cards > #card p{
+      font-size: 20px;
+    }
+    .cards > #card img{
+      height: 65px;
+    }
+    .cards .card2 img{
+      height: 60px;
+    }
+    /* Вопросы */
+    .ans{
+      width: 370px;
+    }
+    .answer{
+      font-size: 19px;
+    }
+  }
+
+  @media(max-width: 900px){
+    .cards > #card{
+      width: 200px;
+      height: 140px;
+      border-radius: 12px;
+      gap: 5px;
+      box-shadow: inset -10px -10px 15px 3px #1111115b; 
+    }
+    .cards > #card p{
+      font-size: 16px;
+    }
+    .cards > #card img{
+      height: 55px;
+    }
+    /* Вопросы */
+    .check>span::before {
+      width: 33px;
+      height: 33px;
+      border-radius: 10px;
+    }
+  }
+
+  @media(max-width: 730px){
+    .cards > #card{
+      width: 170px;
+      height: 119px;
+      border-radius: 10px;
+      gap: 5px;
+      box-shadow: inset -10px -10px 15px 3px #1111115b; 
+    }
+    .cards > #card p{
+      font-size: 14px;
+    }
+    .cards > #card img{
+      height: 47px;
+    }
+    /* Вопросы */
+    .ans{
+      width: 310px;
+    }
+    .check>span::before {
+      width: 30px;
+      height: 30px;
+      border-radius: 9px;
+    }
+    .question{
+      font-size: 22px;
+    }
+    .answer{
+      font-size: 17px;
+    }
+  }
+
+  @media(max-width: 600px){
+    .cards{
+      grid-gap: 1em;
+      margin-left: 2em;
+      margin-right: 2em;
+      margin-bottom: 2em;
+    }
+    .cards > #card{
+      width: 145px;
+      height: 101px;
+      border-radius: 8px;
+      gap: 5px;
+      box-shadow: inset -10px -10px 15px 3px #1111115b; 
+    }
+    .cards > #card p{
+      font-size: 12px;
+    }
+    .cards > #card img{
+      height: 40px;
+    }
+    /* Вопросы */
+    .ans{
+      width: 280px;
+    }
+    .agree{
+      font-size: 14px;
+    }
+    .answer{
+      font-size: 15px;
+    }
+  }
+
+  @media(max-width: 500px){
+    .cards{
+      grid-gap: 1em;
+      margin-left: 2em;
+      margin-right: 2em;
+      margin-bottom: 2em;
+    }
+    .cards > #card{
+      width: 116px;
+      height: 80px;
+      border-radius: 6.5px;
+      gap: 2px;
+      box-shadow: inset -10px -10px 15px 3px #1111115b; 
+    }
+    .cards > #card p{
+      font-size: 10px;
+    }
+    .cards > #card img{
+      height: 30px;
+    }
+    /* Вопросы */
+    .ans{
+      width: 220px;
+    }
+    .question{
+      font-size: 20px;
+    }
+    .next{
+      width: 270px;
+      height: 44px;
+      border-radius: 26px;
+      font-size: 22px;
+    }
+    .answer{
+      font-size: 14px;
+    }
+  }
+
+    @media(max-width: 400px){
+    .cards{
+      grid-template-columns: 1fr;
+      grid-gap: 2em;
+      margin-left: 3em;
+      margin-right: 3em;
+      margin-bottom: 2em;
+    }
+    .cards > #card{
+      width: 230px;
+      height: 160px;
+      border-radius: 12px;
+      gap: 5px;
+      box-shadow: inset -10px -10px 15px 3px #1111115b; 
+    }
+    .cards > #card p{
+      font-size: 18px;
+    }
+    .cards > #card img{
+      height: 63px;
+    }
+    .row-border-cards{
+      grid-column: 1;
+    }
+    /* Вопросы */
+    .ans{
+      width: 180px;
+    }
+    .agree{
+      font-size: 11px;
+      text-align: center;
+    }
+    .check>span::before {
+      width: 26px;
+      height: 26px;
+      border-radius: 7px;
+      border: 3px solid;
+    }
+    .question{
+      font-size: 18px;
+    }
+    .next{
+      width: 250px;
+      height: 42px;
+      border-radius: 24px;
+      font-size: 22px;
+    }
+  }

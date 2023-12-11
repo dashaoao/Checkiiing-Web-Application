@@ -3,7 +3,7 @@ VOLUME /tmp
 WORKDIR .
 COPY /build/libs/*.jar app.jar
 ENTRYPOINT ["java","-jar","/app.jar"]
-ENV DATABASE_URL jdbc:postgresql://dpg-ck3koemru70s73eq88s0-a.oregon-postgres.render.com:5432/checkiiing
-ENV DATABASE_USERNAME checkiiing_user
-ENV DATABASE_PASSWORD tqWCRnX4ZKtTFcfq3onad9ArDis1BLPp
-EXPOSE 8080
+ENV DATABASE_URL jdbc:postgresql://postgres:64-EE-Dd*E2B3d3-ACf-a2A66FD4ggCb@postgres.railway.internal:5432/railway
+ENV DATABASE_USERNAME postgres
+ENV DATABASE_PASSWORD 64-EE-Dd*E2B3d3-ACf-a2A66FD4ggCb
+EXPOSE 34012
